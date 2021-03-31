@@ -12,6 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Set;
+import java.util.HashMap;
 /**
  *
  * @author gantumur
@@ -29,8 +30,9 @@ public class Lab1 {
     public static void main (String[] args){
 
        //Lab1.simpleQueue();
-       Lab1.simpleList();
+       //Lab1.simpleList();
        //Lab1.simpleSet();
+       Lab1.simpleMap();
     }
     
     /**
@@ -141,8 +143,36 @@ public class Lab1 {
             System.out.println(it.next());
         }
     }
-   
+    
+    /**
+     *  Map ni tulhuur bolon utgaiig hosoor ni hadgaldag listiin turul ba
+     * mapiinhaa alich elemnt ruu handaj uurchilj ustgaj nemej boldog 
+     * listiin turul yum.
+   */
+    
+    public static void simpleMap(){
+        HashMap<String, String> c1 = new HashMap<String, String>();
         
+        //map daa element nemev
+        c1.put("fruit","mango");
+        c1.put("vegetable","carrot");
+        c1.put("food","spagetti");
+        c1.put("drink","water");
+        System.out.println(c1);
+        
+        //engej mapiin element iig ustagna;
+        //c1.clear();
+        
+        System.out.println("map size"+c1.size());
+        
+        //use remove key and element
+        c1.remove("food");
+        System.out.println(c1);
+        
+        //you can replace map element
+        c1.replace("vegetable", "potato");
+        System.out.println("new map"+c1);
+    }        
 
     
 }   
