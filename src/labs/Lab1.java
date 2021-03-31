@@ -5,7 +5,9 @@
  */
 package labs;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 /**
  *
@@ -15,12 +17,14 @@ public class Lab1 {
     
     public static void main (String[] args){
 
-       Lab1.simpleQueue();
-       //Lab1.simpleList();
+       //Lab1.simpleQueue();
+       Lab1.simpleList();
     }
     
     /**
-     * queue tei ajillah tuhai
+     * queue ni first element ni first output boldog
+     * haritsahdaa hamgiin ehnii elemttei haritsah bolomjtoi
+     * listiin turul yum.
      */
     public static void simpleQueue(){
         Queue<Integer> q;
@@ -48,11 +52,39 @@ public class Lab1 {
     }
     
     /**
-     * List tei herhen ajillah bolon methods iin tuhai
+     * List ni olon turliin methoduudtai
+     * elementuudiinhaa ali ruu ni ch handaj boldog
+     * ali ch talaas ali elementee output hiideg list yum.
      */
     public static void simpleList(){
         
+         List<Integer> l1;
+          l1 = new ArrayList<Integer>();
+          
+         for(int i=0; i<10; i++){
+             l1.add(i);
+         }
+         
+         l1.remove(9);
+         System.out.println("it removes 9th element="+l1);
+         
+         //l1.clear();
+         //System.out.println("ir removes all element="+l1);
+         
+         l1.contains(0);
+         System.out.println("checks list contain element you want to check="+l1.contains(0));
+         
+         System.out.println("gets the element you want="+l1.get(3));
+         
+         l1.size();
+         System.out.println("tell the size of list"+l1.size);
+         
+        
     }
+    
+   
+        
 
     
 }   
+
