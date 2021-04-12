@@ -1,51 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ProgramingConstruct;
 
 import java.util.*;
-/**
- * doubly linked listiin negj elementiig ilerhiileg class 
- * @author gantumur
- */
-class Node{
-    int data;
+
+class Node<Object> {
+    Object data;
     Node prev;
     Node next;
     
-    Node (int data) {
+    Node (Object data) {
     this.data= data;
     }
-    /***
-     * Node iin urguudiig String bolgon hevleh method 
-     */
+   
     public String toString(){        
         return ""+data;
     }
 }
-/**
- * Douly linked list undsen class
- */
+
 class DoublyLinkedList{
-    /**
-     * Protery
-     */
+
     private int  size;
     private Node head;
     private Node current;
     private Node tail;
 
-    
-    //struct 
+
     DoublyLinkedList(){
         size = 0;
     }
-    // Element nemeh method
-    public void addElement(int data){
+
+    public void addElement(Object data){
         Node dt = new Node(data);
-        //anhnii element nemeh uyd
+
         if(head==null){
             head = dt;
             current = dt;
@@ -57,7 +43,20 @@ class DoublyLinkedList{
         }
         size++;
     }
-    //linked listees todorhoilson elemntiig avah
+   
+    public void addAfter(Object data, int i){
+        Node dt = new Node(data);
+        
+        this.toHead();
+        for(int j=0; j<i; j++){
+            this.next();
+        }
+        for(int j=0; j<size; j++){
+            if
+        }
+        
+    }
+
     public Node getElement(int i){
         this.toHead();
         for (int j=0 ; j<i; j++)
@@ -65,7 +64,7 @@ class DoublyLinkedList{
         return current;
     }
     
-    // linked listeed zaasan elementiig hasah
+
     public void delElement(int i){
         if(i<size/2){
             this.toHead();
@@ -85,22 +84,22 @@ class DoublyLinkedList{
         
     }
     
-    //linked listiin togloi ruu ochih
+
     public void toHead(){
         current = head;
     }
     
-    //linked listiin suul ruu ochih
+
     public void toTail(){
         current = tail;
     }
     
-    //linked listiin size
+
     public int getSize(){
         return size;
     }
     
-    //listiin hevleh method
+
     public String toString(){
         String ret="";
         Node dt = head;
@@ -135,25 +134,107 @@ class DoublyLinkedList{
 }
 
 
-/**
- *
- * @author gantumur
- */
 public class Labs {
     public static void main(String[] args){
         DoublyLinkedList dll;
         dll = new DoublyLinkedList();
-        dll.addElement(4);
-        dll.addElement(7);
-        dll.addElement(8);
-        dll.addElement(13);
+        boolean bool=true;
         
-        System.out.println(dll);
-        Node a= dll.getElement(3);
+        System.out.println("1. addElement");
+        System.out.println("2. getElement");
+        System.out.println("3. delElement");
+        System.out.println("4. getSize");
+        System.out.println("5. print");
+        System.out.println("6. exit");
+        
+        while(bool){
+            System.out.println("Command number:");
+            Scanner obj = new Scanner(System.in);
+            int cmmnd = obj.nextInt();
+            
+            if(cmmnd==1){
+                System.out.println("type element:");
+                Scanner elm = new Scanner(System.in);
+                Object asd = elm.nextInt(); 
+                dll.addElement(asd);
+            }else if(cmmnd==2){
+                System.out.println("type indexof number you wanna get:");
+                Scanner elm = new Scanner(System.in);
+                int index = elm.nextInt();
+                dll.getElement(index);
+            }else if(cmmnd==3){
+                System.out.println("type indexof number you wanna del:");
+                Scanner elm = new Scanner(System.in);
+                int index = elm.nextInt();
+                dll.delElement(index);
+            }else if(cmmnd==4){
+                System.out.println(dll.getSize());
+            }else if(cmmnd==5){
+                System.out.println(dll);
+            }else if(cmmnd==6){
+                break;
+            }
+                
+            
+        }
         
         
-        System.out.println(dll.getElement(3));
-        dll.delElement(1);
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        boolean bln = true;
+        
+            
+        System.out.println("1- insert element");
+        System.out.println("2- get element");
+        System.out.println("3- remove element");
+        System.out.println("4- print");
+        System.out.println("5- listin hemjee");
+        System.out.println("6- exit");
+        
+        while(bln){
+            
+            
+            
+            
+        }
+
+        
+        dll.addElement("asdaf");
+        dll.addElement(12314);
+        dll.addElement("aerte");
+        dll.addElement("rewrewrt");
         System.out.println(dll);
     }    
 }
