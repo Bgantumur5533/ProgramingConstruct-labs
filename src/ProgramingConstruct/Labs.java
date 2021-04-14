@@ -168,73 +168,50 @@ public class Labs {
                     System.out.println(dll);
                     break;
                 case 6:
+                    bool=false;
                     break ;
                 default:
-                    break;
+                    break ;
             }
         }
 
                 
             
         }
-        
-        
-        
-        
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        boolean bln = true;
-        
-            
-        System.out.println("1- insert element");
-        System.out.println("2- get element");
-        System.out.println("3- remove element");
-        System.out.println("4- print");
-        System.out.println("5- listin hemjee");
-        System.out.println("6- exit");
-        
-        while(bln){
-            
-            
-            
-            
-        }
+}
 
         
-        dll.addElement("asdaf");
-        dll.addElement(12314);
-        dll.addElement("aerte");
-        dll.addElement("rewrewrt");
-        System.out.println(dll);
-    }    
-}
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
