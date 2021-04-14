@@ -43,19 +43,6 @@ class DoublyLinkedList{
         }
         size++;
     }
-   
-    public void addAfter(Object data, int i){
-        Node dt = new Node(data);
-        
-        this.toHead();
-        for(int j=0; j<i; j++){
-            this.next();
-        }
-        for(int j=0; j<size; j++){
-            if
-        }
-        
-    }
 
     public Node getElement(int i){
         this.toHead();
@@ -139,41 +126,54 @@ public class Labs {
         DoublyLinkedList dll;
         dll = new DoublyLinkedList();
         boolean bool=true;
-        
-        System.out.println("1. addElement");
-        System.out.println("2. getElement");
-        System.out.println("3. delElement");
-        System.out.println("4. getSize");
-        System.out.println("5. print");
-        System.out.println("6. exit");
-        
-        while(bool){
-            System.out.println("Command number:");
+          
+        while (bool) {
+            System.out.println("1: add elements");
+            System.out.println("2- get element");
+            System.out.println("3- del element");
+            System.out.println("4- get size");
+            System.out.println("5- print");
+            System.out.println("6- exit");
             Scanner obj = new Scanner(System.in);
             int cmmnd = obj.nextInt();
-            
-            if(cmmnd==1){
-                System.out.println("type element:");
-                Scanner elm = new Scanner(System.in);
-                Object asd = elm.nextInt(); 
-                dll.addElement(asd);
-            }else if(cmmnd==2){
-                System.out.println("type indexof number you wanna get:");
-                Scanner elm = new Scanner(System.in);
-                int index = elm.nextInt();
-                dll.getElement(index);
-            }else if(cmmnd==3){
-                System.out.println("type indexof number you wanna del:");
-                Scanner elm = new Scanner(System.in);
-                int index = elm.nextInt();
-                dll.delElement(index);
-            }else if(cmmnd==4){
-                System.out.println(dll.getSize());
-            }else if(cmmnd==5){
-                System.out.println(dll);
-            }else if(cmmnd==6){
-                break;
+            switch (cmmnd) {
+                case 1:
+                    {
+                        System.out.println("enter Element:");
+                        Scanner elm = new Scanner(System.in);
+                        int asd = elm.nextInt();
+                        dll.addElement(asd);
+                        break;
+                    }
+                case 2:
+                    {
+                        System.out.println("element index:");
+                        Scanner elm = new Scanner(System.in);
+                        int get = elm.nextInt();
+                        dll.getElement(get);
+                        break;
+                    }
+                case 3:
+                    {
+                        System.out.println("del element:");
+                        Scanner elm = new Scanner(System.in);
+                        int del = elm.nextInt();
+                        dll.delElement(del);
+                        break;
+                    }
+                case 4:
+                    dll.getSize();
+                    break;
+                case 5:
+                    System.out.println(dll);
+                    break;
+                case 6:
+                    break ;
+                default:
+                    break;
             }
+        }
+
                 
             
         }
